@@ -17,6 +17,17 @@ Optimization: We use a Learning Rate to nudge our estimate toward the new readin
 
 This results in a smooth, lag-compensated output that ignores minor spikes while following the true trend of the battery discharge.
 
+🧠 Why "Stochastic"?
+In traditional Gradient Descent, the algorithm looks at the entire dataset (the "Batch") to calculate a single update. While precise, this is impossible in embedded systems with limited RAM.
+
+This project uses the Stochastic (meaning "random") approach because:
+
+Real-time Processing: It processes each sensor reading one-by-one as it arrives. It doesn't need to store a history of data, making it extremely memory-efficient for microcontrollers like Arduino or ESP32.
+
+Handling Randomness: Every sensor reading contains "stochastic" noise (random electrical interference). By taking small steps (learning_rate) for every noisy point, the random errors eventually cancel each other out, leaving only the true signal trend.
+
+Online Learning: The "model" (our voltage estimate) is constantly learning and adapting. If you plug in a charger, the SGD filter reacts immediately to the new trend without needing to "re-train" on a whole batch of data.
+
 🚀 Key Features
 Minimalist Logic: The core algorithm is only 3 lines of code—ideal for porting to C/C++ for Microcontrollers (Arduino, ESP32, STM32).
 
