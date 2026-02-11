@@ -30,7 +30,4 @@ Visual Validation: Includes a Matplotlib script to compare the Raw, True, and Sm
 🛠️ Usage
 Ensure you have numpy and matplotlib installed.
 
-Run the simulation:
 
-Bash
-python mm.py
