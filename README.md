@@ -24,6 +24,9 @@ Dynamic Tuning: Adjust the learning_rate to balance between "smoothness" and "re
 
 Visual Validation: Includes a Matplotlib script to compare the Raw, True, and Smoothed signals.
 
+![Capture d’écran 2026-02-11 095219](https://github.com/user-attachments/assets/1dff1648-6cec-49af-a477-2bca6e5db61c)
+
+
 🛠️ Usage
 Ensure you have numpy and matplotlib installed.
 
